@@ -1,0 +1,65 @@
+@import './css/normalize.css';
+@import './css/skeleton.css';
+
+.main {
+  height: 100vh;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.history {
+}
+
+.row {
+  padding: 0 1rem;
+}
+.distractions {
+  width: 100%;
+  height: 99vh;
+  margin: 0;
+}
+
+.objective {
+  text-align: center;
+}
+.timer {
+  font-size: 4em;
+  -webkit-touch-callout: none;
+    -webkit-user-select: none;
+     -khtml-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
+}
+
+.history {
+  -webkit-touch-callout: none;
+    -webkit-user-select: none;
+     -khtml-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
+}
+.ct-series-a .ct-line, .ct-series-a .ct-point {
+  stroke: #eee;
+}
+.ct-label {
+  display: none !important;
+}
+.ct-chart {
+  margin-left: -50px;
+}
+.ct-grid {
+  stroke: rgba(0, 0, 0, 0.1);
+}
+.ct-point {
+  display: none;
+}
+.ct-line {
+  stroke-width: 3px;
+}
+label {
+  font-weight: normal;
+}

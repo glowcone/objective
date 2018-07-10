@@ -14,7 +14,7 @@ class App extends Component {
       stretch: true
     }
     this.notif = new Audio(notifSound);
-    this.oldScore = sessionStorage.getItem('score');
+    this.oldScore = localStorage.getItem('score');
     if (this.oldScore) {
       this.oldScore = this.oldScore.split(",");
     } else {
@@ -31,7 +31,7 @@ class App extends Component {
   }
 
   onChangeDistractions = (e) => {
-    sessionStorage.setItem('distractions', e.target.value);
+    localStorage.setItem('distractions', e.target.value);
     this.setState({ distractions: e.target.value });
   }
 
@@ -62,7 +62,7 @@ class App extends Component {
     this.setState({
       history: histCopy
     }, () => {
-      sessionStorage.setItem('score', [...this.oldScore, this.getScore()])
+      localStorage.setItem('score', [...this.oldScore, this.getScore()])
     })
   }
 
@@ -85,7 +85,7 @@ class App extends Component {
       objective: "",
       history: [{objective: this.state.objective, done: false}, ...this.state.history]
     }, () => {
-      sessionStorage.setItem('score', [...this.oldScore, this.getScore()])
+      localStorage.setItem('score', [...this.oldScore, this.getScore()])
     });
     this.notif.play();
   }
@@ -105,7 +105,7 @@ class App extends Component {
   }
 
   componentDidMount() {
-    const temp = sessionStorage.getItem('distractions')
+    const temp = localStorage.getItem('distractions')
     if (temp) {
       this.setState({ distractions: temp })
     }
